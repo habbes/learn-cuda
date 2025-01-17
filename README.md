@@ -11,7 +11,7 @@ nvidia-smi
 We compile CUDA-accelerated programs using the [NVIDIA CUDA Compiler](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html) `nvcc`:
 
 ```sh
-nvcc -o out some-CUDA.cu -run
+nvcc -o bin/out some-CUDA.cu -run
 ```
 
 where:
