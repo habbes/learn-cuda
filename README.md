@@ -21,9 +21,23 @@ where:
 - The `o` flag is used to specify the output file for the compiled program.
 - As a matter of convenience, providing the `run` flag will execute the successfully compiled binary.
 
-Installing the compiler:
+## Installing the compiler toolchain
 
 - [Installation guide for Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
 - [Installation guide for Windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
 
 If using VS Code, the [Nsight Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=NVIDIA.nsight-vscode-edition) extension can provide language support features (auto-complete, debugging, etc.).
+
+## Troubleshooting
+
+### Getting the error `nvcc fatal: Cannot find compiler 'cl.exe' in PATH` on Windows
+
+This means `nvcc` could not find the Microsoft C++ compiler. Ensure you have Visual Studio installed with **Desktop Development with C++** workload.
+
+Consider using the **Developer Powershell for VS 2022** or **Developer Command Prompt for VS 2022** which usually load with relevant commands accessible.
+
+You can also try to manually update PATH to include the directory containing the `cl.exe` command (e.g. `C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\<version>\bin\Hostx64\x64`).
+
+### Getting an access violation error on Windows related to `cudafe++`
+
+Try to run in Adminstrator mode
