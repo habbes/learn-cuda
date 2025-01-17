@@ -20,3 +20,10 @@ where:
 - `some-CUDA.cu` is passed as the file to compile (`.cu` is the file extension for CUDA-accelerated programs).
 - The `o` flag is used to specify the output file for the compiled program.
 - As a matter of convenience, providing the `run` flag will execute the successfully compiled binary.
+
+Installing the compiler:
+
+- [Installation guide for Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+- [Installation guide for Windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
+
+If using VS Code, the [Nsight Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=NVIDIA.nsight-vscode-edition) extension can provide language support features (auto-complete, debugging, etc.).
