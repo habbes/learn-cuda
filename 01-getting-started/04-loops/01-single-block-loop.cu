@@ -24,5 +24,11 @@ int main()
 
     printf("\nGPU Loop:\n");
     gpuLoop<<<1, N>>>();
+    // I noticed that the out from the GPU loop is in the
+    // same ascending order as the CPU even after running multiple times.
+    // I expected the order to be random due the parallism. I wonder
+    // whether this is a coincidence or there is a reason for this.
+    // I will test with larger N and/or different machines to see if the result
+    // is consistent.
     cudaDeviceSynchronize();
 }
